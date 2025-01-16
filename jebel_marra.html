@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism in Sudan</title>
+    <link rel="stylesheet" href="styles/to.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="images/your-logo.png" alt="Logo" class="logo">
+        <h1>Tourism in Sudan</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="places.html">Tourist Places</a>
+            <a href="culture.html">Culture & History</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <input type="text" placeholder="Search...">
+    </header>
+
+    <h1>WELCOME to Gabal Marra</h1>
+    <main class="content-section">
+        <h3 class="de">Tourism</h3>
+        <h5 class="de">
+            <div>
+                <div>Jebel Marra is one of Sudan's most prominent tourist destinations,</div>
+                <div>attracting both local and international visitors seeking breathtaking natural beauty.</div>
+                <div>The mountain offers a variety of activities, including mountain climbing,</div>
+                <div>exploring waterfalls and volcanic lakes,</div>
+                <div>as well as safari trips to discover its unique landscapes.</div>
+            </div>
+        </h5>
+        <h3 class="de">Location</h3>
+        <h5 class="de">
+            <div>
+                <div>Jebel Marra is located in the Darfur region in western Sudan,</div>
+                <div>spanning a vast area that covers parts of Central and West Darfur states.</div>
+                <div>With an elevation of 3,042 meters above sea level, it is one of the highest peaks in Sudan.</div>
+            </div>
+        </h5>
+        <h3 class="de">Historical and Natural Significance</h3>
+        <h5 class="de">
+            <div>
+                <div>Jebel Marra is characterized by a moderate climate that becomes cooler at higher altitudes,</div>
+                <div>setting it apart from Sudan's prevailing desert climate.</div>
+                <div>The area is home to famous waterfalls like "Gulu Waterfall" and volcanic lakes that add to its distinct charm,</div>
+                <div>along with dense forests and rare plants.</div>
+                <div>The mountain also holds cultural significance for the local population and serves</div>
+                <div>as an economic pillar with fertile soils supporting the cultivation of coffee, fruits, and vegetables.</div>
+            </div>
+        </h5>
+        <h3 class="de">Visitor Tips</h3>
+        <h5 class="de">
+            <div>
+                <div>Wear comfortable clothing and suitable shoes for mountain climbing.</div>
+                <div>Bring photography equipment to capture the stunning scenery.</div>
+                <div>Consult local guides to explore the mountain's key attractions.</div>
+                <div>Plan your visit during milder seasons to enjoy favorable weather conditions.</div>
+            </div>
+        </h5>
+        <h3>Take a Look at</h3>
+        <div class="image-gallery">
+            <img src="images/photo1.jpg" alt="صورة 1">
+            <img src="images/photo2.jpg" alt="صورة 2">
+            <img src="images/photo3.jpg" alt="صورة 3">
+        </div>
+
+        <!-- خريطة -->
+        <div id="map" style="height: 400px;"></div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tourism in Sudan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="scripts/to.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src="scripts/search.js"></script>
+
+    <script>
+        AOS.init();
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            navigation: true,
+        });
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+
+        // تهيئة الخريطة
+        const map = L.map('map').setView([13.2800, 24.3500], 12);
+
+        // إضافة طبقة الخريطة
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // إضافة علامة للموقع
+        L.marker([13.2800, 24.3500]).addTo(map)
+            .bindPopup('<b>Jebel Marra</b><br>Sudan.')
+            .openPopup();
+    </script>
+</body>
+</html>

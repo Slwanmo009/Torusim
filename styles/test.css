@@ -1,0 +1,260 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    
+    position: relative;
+    z-index: 2;  /* لضمان ظهور شريط البحث فوق النتائج */
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eebc52;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+#search-form button:hover {
+    background-color: #eebc52;
+}
+
+/* تنسيق نتائج البحث */
+.results {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    
+    width: 300px;  /* لجعل عرض النتائج متناسق مع عرض شريط البحث */
+    background-color: white;
+    border: 1px solid white;
+    border-top: none;
+  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 200px;  /* لتحديد الحد الأقصى للارتفاع */
+    overflow-y: auto;   /* لإضافة تمرير عمودي إذا كانت النتائج كثيرة */
+    z-index: 1000;  /* لضمان ظهور النتائج فوق أي محتوى آخر */
+}
+
+.result-item {
+    padding: 10px;
+    
+}
+
+.result-item:last-child {
+    border-bottom: none;  /* لإزالة الخط السفلي من العنصر الأخير */
+}
+
+.result-item p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.result-item a {
+    color: #523b0a;
+    text-decoration: none;
+}
+
+.result-item a:hover {
+    text-decoration: none;
+    color: #a17d2e;
+}
+
+/* دعم الأجهزة التي تعمل باللمس */
+@media (hover: none) {
+    #search-form button:hover {
+        background-color: #eebc52;
+    }
+}
+.header {
+    display: flex;
+ 
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    background-color: rgba(51, 37, 18, 0.7);
+    color: white;
+    border-bottom: 2px solid #eebc52;
+}
+
+.logo {
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}  
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}  
+h1 {
+ 
+    text-align: center;
+    
+    color: #523b0a;
+    }
+h2 {
+    color: #523b0a; 
+}    
+    p {
+  text-align: center;
+    }
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #eebc52;
+}
+h4 {
+    text-align: center;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+.nav-links a:hover {
+    color: #eebc52;
+}
+.nav-links input[type="text"] {
+    flex: 1;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 1px solid #eebc52;
+    padding: 10px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    border-left: none;
+    
+}
+
+.warning {
+    background-color:#eebc52 ;
+    color: #523b0a;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    width: 48%;
+}
+
+.photos, .comments, .add-comment, .tips {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.photo-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.photo-grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.comment-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.comment-list p {
+    margin: 0 0 10px;
+}
+
+.add-comment form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-comment textarea {
+    resize: vertical;
+    height: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(51, 37, 18, 0.7);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #eebc52;
+    outline: none;
+    box-shadow: none;
+}
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+button:active {
+    background-color: #523b0a;
+}
+
+.footer {
+    background-color: rgba(51, 37, 18, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+   border-top: 2px solid #eebc52;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #eebc52;
+}

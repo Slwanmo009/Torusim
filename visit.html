@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Visited Tourist Places</title>
+    <link rel="stylesheet" href="styles/visit.css">
+        
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.jpg" alt="Logo" class="logo">
+        <h1>Tourism in Sudan</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="about.html">About Sudan</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <form id="search-form">
+            <div class="search-bar">
+                <input type="text" id="search-input"  placeholder="Search..." required>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        <div id="results" class="results"></div>
+    </header>
+    <main class="main-content">
+        <h1>Most Visited Tourist Places</h1>
+        <p>Discover the most popular tourist destinations in Sudan. These places are a must-visit for anyone looking to explore the beauty and history of the country.</p>
+        <div class="places">
+            <div class="place">
+                <img src="images/most_visited/Bagrawiya.jpg" alt="Bagrawiya">
+                <h2>Bagrawiya</h2>
+                <p>Explore the ancient ruins and breathtaking views at Albagrawiya.</p>
+                <a href="jebel_barkal.html" class="learn-more">Learn More</a>
+            </div>
+            <div class="place">
+                <img src="images/most_visited/totil.jpg" alt="Jebel Kauda">
+                <h2>Mount Totil</h2>
+                <p>Discover the stunning landscapes and cultural heritage of Mount totil.</p>
+                <a href="totil.html" class="learn-more">Learn More</a>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Tourism in Sudan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            </footer>
+    <script src="scripts/visit.js"></script>
+</body>
+</html>

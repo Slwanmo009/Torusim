@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فنادق السودان</title>
+    <link rel="stylesheet" href="styles/hotels.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="places.html">الأماكن السياحية</a>
+            <a href="hotels.html" class="active">الفنادق</a>
+            <a href="culture.html">الثقافة والتاريخ</a>
+            <a href="about_sudan.html">عن السودان</a>
+            <a href="contact.html">تواصل معنا</a>
+            <a href="most_visited.html">الأكثر زيارة</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>البحث عن فنادق في السودان</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="ابحث عن فندق..." required>
+            <button type="submit">بحث</button>
+        </form>
+        <div id="map" style="height: 400px; width: 100%;"></div> <!-- إضافة الخريطة -->
+        <select id="location-filter">
+            <option value="all">كل الأماكن</option>
+            <option value="khartoum">الخرطوم</option>
+            <option value="omdurman">أم درمان</option>
+            <!-- أضف المزيد من الخيارات هنا -->
+        </select>
+        <div id="results" class="results"></div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 جميع الحقوق محفوظة.</p>
+    </footer>
+    <script src="scripts/hotels.js"></script>
+</body>
+</html>
