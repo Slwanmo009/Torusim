@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism in Sudan</title>
+    <link rel="stylesheet" href="styles/main.css">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.jpg" alt="Logo" class="logo">
+        <h1>Tourism in Sudan</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="impression.html">Impression</a>
+            <a href="visit.html">Most Visited</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <h1>WELCOME to Tourist Kilo</h1>
+    <main class="content-section">
+    <h3 class="de">
+        1. Tourism at Al-Kilo Beach
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>Al-Kilo Beach is a popular destination in Port Sudan, blending stunning coastal nature with recreational services.</div>
+            <div>
+                <h4>Tourist Activities:</h4>    
+            </div>
+            <div>Diving and Snorkeling: Explore coral reefs and marine life.</div>
+            <div>Boat Rides: Enjoy scenic sea trips.</div>
+            <div>Swimming and Relaxation: Unwind on the soft white sands.</div>
+            <div>Barbecues and Family Gatherings: Host memorable events by the beach.</div>
+            <div>
+                <h4>Tourist Services:</h4>
+            </div>
+            <div>Wooden huts and umbrellas for comfort.</div>
+            <div>Restaurants and cafes offering fresh seafood.</div>
+            <div>Facilities for renting diving and snorkeling equipment</div>
+        
+        </div>
+
+    </h5>
+    <h3 class="de">
+        2. Location of Al-Kilo Beach
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>The beach is conveniently located near downtown Port Sudan, making it easily accessible.</div>
+            <div>It overlooks the Red Sea, famous for its crystal-clear waters and diverse coral reefs.</div>
+        </div>
+    </h5>
+    <h3 class="de">
+        3. Historical Significance
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>Al-Kilo Beach is one of the region’s standout destinations, reflecting</div>
+            <div>the unique natural beauty of the Red Sea and symbolizing the area's marine heritage.</div>
+        </div>
+    </h5>
+    <h3 class="de">
+        4. Tips for Visitors
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>The best time to visit is during winter (November to February)</div>
+            <div>when the weather is mild and ideal for marine activities.</div>
+            <div>Bring cameras to capture the breathtaking natural beauty and coral reefs.</div>
+            <div>Take full advantage of the beach services, such as renting equipment or enjoying fresh seafood.</div>
+        </div>
+    </h5>
+    <h3>معرض الصور</h3>
+        <div class="image-gallery">
+            <img src="images/destination6/img1.jpg" alt="صورة 3">
+            <img src="images/destination6/img2.jpg" alt="صورة 3">
+            <img src="images/destination6/img3.jpg" alt="صورة 3">
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Tourism in Sudan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            </footer>
+
+            <script src="scripts/to.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+            <script src="firebaseConfig.js"></script>
+            <script src="scripts/search.js"></script>
+        
+            <script>
+                AOS.init();
+                new fullpage('#fullpage', {
+                    autoScrolling: true,
+                    navigation: true,
+                });
+                particlesJS.load('particles-js', 'particles.json', function() {
+                    console.log('particles.js loaded - callback');
+                });
+        
+                // تهيئة الخريطة
+                const map = L.map('map').setView([13.2800, 24.3500], 12);
+        
+                // إضافة طبقة الخريطة
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+        
+                // إضافة علامة للموقع
+                L.marker([13.2800, 24.3500]).addTo(map)
+                    .bindPopup('<b>Jebel Marra</b><br>Sudan.')
+                    .openPopup();
+            </script>
+        </body>
+        </html>

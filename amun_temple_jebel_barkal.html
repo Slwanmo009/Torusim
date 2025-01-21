@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism in Sudan</title>
+    <link rel="stylesheet" href="styles/main.css">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.jpg" alt="Logo" class="logo">
+        <h1>Tourism in Sudan</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="impression.html">Impression</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="visit.html">Most Visited</a>
+        </nav>
+    </header>
+    <h1>WELCOME to Temple of Amun,Jabal Barkal</h1>
+    <main class="content-section">
+        <h3 class="de">
+            Tourism
+        </h3>
+        <h5 class="de">
+            <div>
+                <div>The Temple of Amun at Jebel Barkal is one of the most significant archaeological and tourist attractions in Sudan’s Northern State.</div>
+                <div>It attracts visitors from around the world eager to explore the history of the Kushite Kingdom and ancient Egyptian civilization.</div>
+                <div>The temple’s unique architectural blend of Egyptian and Nubian styles</div>
+                <div>makes it a distinctive destination for history and culture enthusiasts.</div>
+            </div>
+        </h5>
+        <h3 class="de">
+            Location
+        </h3>
+        <h5 class="de">
+            <div>
+                <div>The Temple of Amun is located 400</div>
+                <div>kilometers north of Khartoum, near the city of Karima in Sudan’s Northern State.</div>
+                <div>It is nestled beside Jebel Barkal, a historical and religious landmark,</div>
+                <div>adding to the strategic and cultural significance of its location.</div>
+            </div>
+        </h5>
+        <h3 class="de">
+            Historical Significance
+        </h3>
+        <h5 class="de">
+            <div>
+                <div>Built in the 13th century BCE, the temple is believed to have been</div>
+                <div>established during the reign of Thutmose III and completed under Ramses II.</div>
+                <div>It played a vital role in the Kushite Kingdom</div>
+                <div>and was later expanded by the Nubian king Piye (Piankhi) and other Nubian pharaohs.</div>
+                <div>The temple suffered destruction by the Romans during Gaius Petronius' campaign (25/24 BCE)</div>
+                <div>but was restored and expanded by the Kushite King Natakamani.</div>
+                <div>Serving as a religious center for both Egyptians and Nubians,</div>
+                <div>it holds immense historical importance.</div>
+            </div>
+        </h5>
+        <h3 class="de">
+            Visitor Tips
+        </h3>
+        <h5 class="de">
+            <div>
+                <div>Explore the temple’s columns and intricately decorated walls</div>
+                <div>showcasing the grandeur of Nubian and Egyptian architecture.</div>
+                <div>Plan your visit to include Jebel Barkal for a comprehensive historical experience.</div>
+                <div>Visit local museums to learn more about the artifacts excavated from the temple.</div>
+                <div>Wear comfortable clothing and carry water, as the temple is situated in a desert climate.</div>
+            </div>
+        </h5>
+        <h3>معرض الصور</h3>
+        <div class="image-gallery">
+            <img src="images/destination1/img1.jpg" alt="صورة 1">
+            <img src="images/destination1/img2.jpg" alt="صورة 2">
+            <img src="images/destination1/img3.jpg" alt="صورة 3">
+            <img src="images/destination1/img4.jpg" alt="صورة 4">
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Tourism in Sudan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            </footer>
+
+            <script src="scripts/to.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+            <script src="firebaseConfig.js"></script>
+            <script src="scripts/search.js"></script>
+        
+            <script>
+                AOS.init();
+                new fullpage('#fullpage', {
+                    autoScrolling: true,
+                    navigation: true,
+                });
+                particlesJS.load('particles-js', 'particles.json', function() {
+                    console.log('particles.js loaded - callback');
+                });
+        
+                // تهيئة الخريطة
+                const map = L.map('map').setView([13.2800, 24.3500], 12);
+        
+                // إضافة طبقة الخريطة
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+        
+                // إضافة علامة للموقع
+                L.marker([13.2800, 24.3500]).addTo(map)
+                    .bindPopup('<b>Jebel Marra</b><br>Sudan.')
+                    .openPopup();
+            </script>
+        </body>
+        </html>
