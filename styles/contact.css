@@ -23,13 +23,27 @@ body {
 }
 .header {
     display: flex;
+ 
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color:rgba(51, 37, 18, 0.7);
+    padding: 7px;
+    background-color: rgba(51, 37, 18, 0.7);
     color: white;
-    border-bottom: 2px solid  #eebc52;
+    border-bottom: 2px solid #eebc52;
 }
+
+.logo {
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}  
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}   
 h1 {
  
     text-align: center;
