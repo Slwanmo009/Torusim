@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism in Sudan</title>
+    <link rel="stylesheet" href="styles/main.css">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.jpg" alt="Logo" class="logo">
+        <h1>Tourism in Sudan</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="impression.html">Impression</a>
+            <a href="visit.html">Most Visited</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <h1>WELCOME  to Mount Totil</h1>
+    <main class="content-section">
+        <h3 class="de">
+            Tourism
+        </h3>
+        <h5 class="de">
+            <div>
+                <div>Jebel Totil is a prominent tourist destination in eastern Sudan,</div>
+                <div>near the city of Kassala. Renowned for its breathtaking natural beauty and ecological diversity,</div>
+                <div>it is a popular spot for trips and picnics. The mountain offers various activities, including hiking,</div>
+                <div>visiting natural springs, and exploring wildlife and vegetation.</div>
+                <div>It is also an ideal location for photography enthusiasts,</div>
+                <div>thanks to its panoramic views of Kassala and its surrounding plains</div>
+            </div>
+        </h5>
+        <h3 class="de">
+            Location
+        </h3>
+        <h5  class="de">
+            <div>
+                <div>Jebel Totil is located south of Kassala, just about 4 kilometers away.</div>
+                <div>It is part of the famous Taka Mountain Range,</div>
+                <div>which enhances its significance as a unique natural landmark.</div>
+            </div>
+        </h5>
+        <h3 class="de">
+            Historical and Cultural Significance
+        </h3>
+        <h5 class="de">
+            <div>
+                <div>Jebel Totil holds great cultural and historical symbolism for the local population.</div>
+                <div>The area around the mountain hosts numerous local festivals</div>
+                <div>and traditional celebrations that showcase the region's heritage. Additionally,</div>
+                <div>the natural springs at its base serve as a vital source of drinking water and irrigation,</div>
+                <div>further highlighting its economic importance.</div>
+            </div>
+        </h5>
+        <h3 class="de">
+            Visitor Tips
+        </h3>
+        <h5 class="de">
+            <div>
+                <div>Choose favorable times for your visit, such as seasons with moderate weather, to avoid extreme heat.</div>
+                <div>Bring a camera to capture the stunning panoramic views.</div>
+                <div>Take time to visit the natural springs and enjoy the surrounding areas.</div>
+                <div>Choose favorable times for your visit, such as seasons with moderate weather,</div>
+                <div>to avoid extreme heat.</div>
+            </div>
+        </h5>
+        <h3>معرض الصور</h3>
+        <div class="image-gallery">
+            <img src="images/destination3/img1.jpg" alt="صورة 1">
+            <img src="images/destination3/img2.jpg" alt="صورة 2">
+            <img src="images/destination3/img3.jpg" alt="صورة 3">
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Tourism in Sudan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            </footer>
+          
+
+    <script src="scripts/to.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src="scripts/search.js"></script>
+
+    <script>
+        AOS.init();
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            navigation: true,
+        });
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+
+        // تهيئة الخريطة
+        const map = L.map('map').setView([13.2800, 24.3500], 12);
+
+        // إضافة طبقة الخريطة
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // إضافة علامة للموقع
+        L.marker([13.2800, 24.3500]).addTo(map)
+            .bindPopup('<b>Jebel Marra</b><br>Sudan.')
+            .openPopup();
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism in Sudan</title>
+    <link rel="stylesheet" href="styles/main.css">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.jpg" alt="Logo" class="logo">
+        <h1>Tourism in Sudan</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="impression.html">Impression</a>
+            <a href="visit.html">Most Visited</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <h1>WELCOME To Seqneeb Island</h1>
+    <main class="content-section">
+    <h3 class="de">
+        1. Tourism in Sanganeb Island
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>Sanganeb Island is one of Sudan's top tourist destinations, offering a variety of activities:</div>
+            <div>Diving: Explore coral reefs and underwater caves.</div>
+            <div>Snorkeling: Enjoy surface-level snorkeling among colorful fish.</div>
+            <div>Boat Tours: Scenic trips around the island by boat.</div>
+            <div>Relaxation: Unwind on its sandy beaches and enjoy the serene atmosphere.</div>
+        </div>
+
+
+    </h5>
+    <h3 class="de">
+        2. Location of Sanganeb Island
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>The island is located approximately 25 kilometers from Port Sudan in the Red Sea.</div>
+            <div>It is the only island in Sudan with a nearly enclosed circular</div>
+            <div>coral reef formation known as an "atoll."</div>
+            <div>Its unique position in the territorial waters of the Red Sea</div>
+            <div>makes it an attractive destination for divers.</div>
+        </div>
+    </h5>
+    <h3  class="de">
+        3. Environmental Significance of Sanganeb Island
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>Home to one of the richest marine ecosystems in the Red Sea.</div>
+            <div>A habitat for rare species of fish, sea turtles, and other marine life.</div>
+            <div>A UNESCO-supervised marine reserve and part of the Dungonab and Sanganeb</div>
+            <div>Marine Protected Area, recognized as a World Heritage Site.</div>
+        </div>
+    </h5>
+    <h3 class="de">
+        4. Historical Significance
+    </h3>
+    <h5  class="de">
+        <div>
+            <div>The circular coral reefs of Sanganeb Island are a globally rare natural</div>
+            <div>phenomenon, adding both historical and ecological value.</div>
+            <div>Its inclusion in the UNESCO World Heritage list highlights</div>
+            <div>its importance as a unique environmental and heritage destination.</div>
+        </div>
+    </h5>
+    <h3 class="de">
+        5. Tips for visitors
+    </h3>
+    <h5 class="de">
+        <div>
+            <div>The island is accessible via tour boats from Port Sudan,</div>
+            <div>with trips taking about one to two hours.</div>
+            <div>Bring a waterproof camera to capture the breathtaking marine scenery.</div>
+            <div>The best time to visit is during mild weather seasons to fully enjoy the marine activities.</div>
+        </div>
+    </h5>
+    <h3>معرض الصور</h3>
+        <div class="image-gallery">
+            <img src="images/destination5/img1.jpg" alt="صورة 1">
+            <img src="images/destination5/img2.jpg" alt="صورة 2">
+            <img src="images/destination5/img3.jpg" alt="صورة 3">
+            <img src="images/destination5/img4.jpg" alt="صورة 3">
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Tourism in Sudan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            </footer>
+
+            <script src="scripts/to.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+            <script src="firebaseConfig.js"></script>
+            <script src="scripts/search.js"></script>
+        
+            <script>
+                AOS.init();
+                new fullpage('#fullpage', {
+                    autoScrolling: true,
+                    navigation: true,
+                });
+                particlesJS.load('particles-js', 'particles.json', function() {
+                    console.log('particles.js loaded - callback');
+                });
+        
+                // تهيئة الخريطة
+                const map = L.map('map').setView([13.2800, 24.3500], 12);
+        
+                // إضافة طبقة الخريطة
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+        
+                // إضافة علامة للموقع
+                L.marker([13.2800, 24.3500]).addTo(map)
+                    .bindPopup('<b>Jebel Marra</b><br>Sudan.')
+                    .openPopup();
+            </script>
+        </body>
+        </html>
