@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourist Place Page</title>
-    <link rel="stylesheet" href="styles/test.css">
+    <title>Visitor Reviews</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header class="header">
@@ -12,78 +12,60 @@
         <h1>Tourism in Sudan</h1>
         <nav class="nav-links">
             <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
             <a href="visit.html">Most Visited</a>
             <a href="about.html">About Sudan</a>
             <a href="contact.html">Contact</a>
+            <a href="reviews.html">Visitor Reviews</a>
         </nav>
-    </form>
-    <div id="results" class="results"></div>
-    
     </header>
 
     <main>
-        <div class="content">
-            <div class="section left">
-                <div class="photos">
-                    <h2>Visitor Photo</h2>
-                    <div class="photo-grid">
-                        <img src="image1.jpg" alt="Visitor Photo 1">
-                        <img src="image2.jpg" alt="Visitor Photo 2">
-                      
-                    </div>
-                </div>
-                <div class="add-comment">
-                    <h2>Share Your Photo ..Add a comment</h2>
-                    <form id="comment-form">
-                        <input type="file" name="visitor-photo" id="visitor-photo" accept="image/*">
-                        <textarea name="comment" id="comment" placeholder="Write a Comment Here..."></textarea>
-                        <button type="submit">Send</button>
-                    </form>
+        <div class="content-container">
+            <!-- صندوق عرض الصور -->
+            <div class="box">
+                <h2>Visitor Photos</h2>
+                <div id="visitor-photos" class="slideshow">
+                    <!-- صور الزوار ستظهر هنا -->
                 </div>
             </div>
 
-            <div class="section right">
-                <div class="comments">
-                    <h2>Visitor comments</h2>
-                    <div class="comment-list" id="comment-list">
-                        <p><strong>زائر 1:</strong> تعليق هنا...</p>
-                        <p><strong>زائر 2:</strong> تعليق هنا...</p>
-                    
-                    </div>
-                </div>
-                <div class="tips">
-                    <h2>Visitor Tips</h2>
-                    <ul>
-                       <li> <div>Wear comfortable clothing and suitable shoes for mountain climbing.</div></li>
-                <li> <div>Bring photography equipment to capture the stunning scenery.</div></li>
-                <li><div>Consult local guides to explore the mountain's key attractions.</div></li>
-                 <li><div>Plan your visit during milder seasons to enjoy favorable weather conditions.</div></li> 
-                    </ul>
-                </div>
-                <div class="content">
-                    <button id="visit-button" onclick="recordVisit()">I have Visited</button>
-                    <button id="new-visit-button" onclick="recordNewVisit()">I haven't Visited yet</button>
-        
+            <!-- صندوق عرض التعليقات -->
+            <div class="box">
+                <h2>Visitor Comments</h2>
+                <div id="visitor-comments" class="comments-container">
+                    <!-- تعليقات الزوار ستظهر هنا -->
                 </div>
             </div>
-            
+
+            <!-- صندوق إضافة صورة -->
+            <div class="box">
+                <h2>Share a Tourist Photo</h2>
+                <form id="photo-upload-form" action="/upload-photo" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="photo-input" name="photo">
+                    <button type="submit">Upload Photo</button>
+                </form>
+            </div>
+
+            <!-- صندوق إضافة تعليق -->
+            <div class="box">
+                <h2>Add a Comment</h2>
+                <form id="comment-form" action="/add-comment" method="POST">
+                    <textarea id="comment-input" name="text" placeholder="Write your comment here..."></textarea>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
         </div>
-
     </main>
 
     <footer class="footer">
         <p>&copy; 2024 Tourism in Sudan. All rights reserved.</p>
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+            <a href="https://www.facebook.com/your-page" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/your-page" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/your-page" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
-    <script src="scripts/test.js"></script>
-    <script src="places.js"></script>
-   <script src="slideshow.js"></script>
-   <script src="app.js"></script>
-   <script src="scripts/search.js"></script>
-
+    <script src="scripts/main.js"></script>
 </body>
 </html>
