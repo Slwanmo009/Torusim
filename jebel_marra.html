@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourism in Sudan</title>
-    <link rel="stylesheet" href="styles/to.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
@@ -61,7 +61,7 @@
                 <div>Plan your visit during milder seasons to enjoy favorable weather conditions.</div>
             </div>
         </h5>
-        <h3>Take a Look at</h3>
+        <h3 class="de">Gallery</h3>
         <div class="image-gallery">
             <img src="images/destination4/img1.jpg" alt="صورة 1">
             <img src="images/destination4/img2.jpg" alt="صورة 2">
@@ -70,8 +70,7 @@
             <img src="images/destination4/img5.jpg" alt="صورة 3">
         </div>
 
-        <!-- خريطة -->
-        <div id="map" style="height: 400px;"></div>
+        
     </main>
 
     <footer class="footer">
@@ -100,18 +99,7 @@
             console.log('particles.js loaded - callback');
         });
 
-        // تهيئة الخريطة
-        const map = L.map('map').setView([13.2800, 24.3500], 12);
-
-        // إضافة طبقة الخريطة
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // إضافة علامة للموقع
-        L.marker([13.2800, 24.3500]).addTo(map)
-            .bindPopup('<b>Jebel Marra</b><br>Sudan.')
-            .openPopup();
+        
     </script>
 </body>
 </html>
